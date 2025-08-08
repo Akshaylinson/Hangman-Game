@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A professional Hangman word guessing game with multiple themes">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <title>Hangman Game | Guess the Word</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="logo">Hangman</h1>
+        <div class="game-stats">
+            <span id="win-count">Wins: 0</span>
+            <span id="loss-count">Losses: 0</span>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="game-area">
+            <div class="gallows-container">
+                <div class="gallows">
+                    <div class="crossbar-one"></div>
+                    <div class="floor"></div>
+                    <div class="crossbar"></div>
+                    <div class="post">
+                        <div class="hangman-part head" data-part="head"></div>
+                        <div class="hangman-part body" data-part="body">
+                            <div class="hangman-part right-arm" data-part="right-arm"></div>
+                            <div class="hangman-part left-arm" data-part="left-arm"></div>
+                            <div class="hangman-part left-leg" data-part="left-leg"></div>
+                            <div class="hangman-part right-leg" data-part="right-leg"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-controls">
+                <div class="theme-selection">
+                    <h2>Choose a Theme</h2>
+                    <div class="theme-buttons">
+                        <button type="button" class="btn theme-btn" data-theme="cities">
+                            <i class="fas fa-city"></i> Cities
+                        </button>
+                        <button type="button" class="btn theme-btn" data-theme="fruits">
+                            <i class="fas fa-apple-alt"></i> Fruits
+                        </button>
+                        <button type="button" class="btn theme-btn" data-theme="food">
+                            <i class="fas fa-utensils"></i> French Food
+                        </button>
+                    </div>
+                </div>
+
+                <div class="game-info">
+                    <div class="theme-display" id="theme-display"></div>
+                    <div class="result-display" id="result-display"></div>
+                    <div class="word-display" id="word-display"></div>
+                    <div class="hint-display" id="hint-display"></div>
+                </div>
+
+                <div class="keyboard" id="keyboard"></div>
+
+                <div class="action-buttons">
+                    <button type="button" class="btn new-game-btn" id="new-game-btn">
+                        <i class="fas fa-redo"></i> New Game
+                    </button>
+                    <button type="button" class="btn hint-btn" id="hint-btn">
+                        <i class="fas fa-lightbulb"></i> Hint
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© <span id="year"></span> Hangman Game. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js" type="module"></script>
+</body>
+
+</html>
